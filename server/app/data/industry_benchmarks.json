@@ -1,0 +1,18 @@
+{
+  "retail": {
+    "profit_margin": 0.15,
+    "debt_to_revenue": 0.35
+  },
+  "manufacturing": {
+    "profit_margin": 0.12,
+    "debt_to_revenue": 0.45
+  },
+  "services": {
+    "profit_margin": 0.20,
+    "debt_to_revenue": 0.30
+  },
+  "logistics": {
+    "profit_margin": 0.10,
+    "debt_to_revenue": 0.50
+  }
+}
