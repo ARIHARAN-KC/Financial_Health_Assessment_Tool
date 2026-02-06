@@ -181,7 +181,7 @@ export default function UploadPage() {
         {/* Header */}
         <div className="mb-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
+            <div className="p-3 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
               <UploadIcon className="w-8 h-8 text-cyan-400" />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white">
@@ -229,7 +229,7 @@ export default function UploadPage() {
                 {/* File Preview */}
                 <div className="flex items-center justify-between p-4 bg-gray-900/50 rounded-xl group/file">
                   <div className="flex items-center space-x-4">
-                    <div className={`p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg ${getFileColor(file.type)}`}>
+                    <div className={`p-3 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-lg ${getFileColor(file.type)}`}>
                       {getFileIcon(file.type)}
                     </div>
                     <div>
@@ -263,7 +263,7 @@ export default function UploadPage() {
                     </div>
                     <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300"
+                        className="h-full bg-linear-to-r from-cyan-500 to-blue-500 transition-all duration-300"
                         style={{ width: `${uploadProgress}%` }}
                       ></div>
                     </div>
@@ -272,7 +272,7 @@ export default function UploadPage() {
 
                 {/* Success Message */}
                 {uploadStatus === "success" && (
-                  <div className="p-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-xl">
+                  <div className="p-4 bg-linear-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-xl">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                         <CheckCircle className="w-5 h-5 text-white" />
@@ -290,7 +290,7 @@ export default function UploadPage() {
 
                 {/* Error Message */}
                 {uploadStatus === "error" && (
-                  <div className="p-4 bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
+                  <div className="p-4 bg-linear-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                         <AlertCircle className="w-5 h-5 text-white" />
@@ -312,9 +312,9 @@ export default function UploadPage() {
           <button
             onClick={upload}
             disabled={!file || isUploading || uploadStatus === "success"}
-            className="px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg group relative overflow-hidden w-full sm:w-auto"
+            className="px-8 py-3.5 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg group relative overflow-hidden w-full sm:w-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             <span className="relative flex items-center justify-center gap-2">
               {isUploading ? (
                 <>
@@ -325,7 +325,7 @@ export default function UploadPage() {
                 <>
                   <Brain className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   Upload & Analyze
-                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transition-transform" />
+                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </>
               )}
             </span>
@@ -349,7 +349,7 @@ export default function UploadPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start space-x-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-linear-to-br from-red-500/10 to-orange-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FileText className="w-5 h-5 text-red-400" />
                 </div>
                 <div>
@@ -358,7 +358,7 @@ export default function UploadPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-linear-to-br from-green-500/10 to-emerald-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FileSpreadsheet className="w-5 h-5 text-green-400" />
                 </div>
                 <div>
@@ -369,7 +369,7 @@ export default function UploadPage() {
             </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-linear-to-br from-purple-500/10 to-pink-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <ImageIcon className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
@@ -378,7 +378,7 @@ export default function UploadPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Shield className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
@@ -397,7 +397,7 @@ export default function UploadPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-gray-900/50 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded flex items-center justify-center">
+                  <div className="w-6 h-6 bg-linear-to-br from-cyan-500/20 to-blue-500/20 rounded flex items-center justify-center">
                     <BarChart3 className="w-3 h-3 text-cyan-400" />
                   </div>
                   <span className="text-white text-sm font-medium">Trend Analysis</span>
@@ -406,7 +406,7 @@ export default function UploadPage() {
               </div>
               <div className="bg-gray-900/50 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded flex items-center justify-center">
+                  <div className="w-6 h-6 bg-linear-to-br from-purple-500/20 to-pink-500/20 rounded flex items-center justify-center">
                     <AlertTriangle className="w-3 h-3 text-purple-400" />
                   </div>
                   <span className="text-white text-sm font-medium">Risk Detection</span>
@@ -415,7 +415,7 @@ export default function UploadPage() {
               </div>
               <div className="bg-gray-900/50 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded flex items-center justify-center">
+                  <div className="w-6 h-6 bg-linear-to-br from-green-500/20 to-emerald-500/20 rounded flex items-center justify-center">
                     <CheckCircle className="w-3 h-3 text-green-400" />
                   </div>
                   <span className="text-white text-sm font-medium">Optimization Tips</span>

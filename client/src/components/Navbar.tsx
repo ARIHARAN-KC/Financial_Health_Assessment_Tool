@@ -61,7 +61,7 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex items-center gap-2">
-                <h1 className="font-bold text-2xl bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <h1 className="font-bold text-2xl bg-linear-to-r from-cyan-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   FinMind
                 </h1>
               </div>
@@ -83,7 +83,7 @@ export default function Navbar() {
                 </Link>
                 <Link 
                   href="/signup" 
-                  className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
+                  className="px-6 py-2.5 bg-linear-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
                 >
                   <UserPlus className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   Sign Up
@@ -115,7 +115,7 @@ export default function Navbar() {
                   onClick={closeAllMenus}
                 >
                   <div className="flex items-center space-x-2">
-                    <Home className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    <Home className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">Dashboard</span>
                   </div>
                 </Link>
@@ -126,7 +126,7 @@ export default function Navbar() {
                   onClick={closeAllMenus}
                 >
                   <div className="flex items-center space-x-2">
-                    <Upload className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    <Upload className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">Upload</span>
                   </div>
                 </Link>
@@ -137,7 +137,7 @@ export default function Navbar() {
                   onClick={closeAllMenus}
                 >
                   <div className="flex items-center space-x-2">
-                    <Zap className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    <Zap className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">AI Analysis</span>
                   </div>
                 </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
                   onClick={closeAllMenus}
                 >
                   <div className="flex items-center space-x-2">
-                    <BarChart3 className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    <BarChart3 className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">Reports</span>
                   </div>
                 </Link>
@@ -159,7 +159,7 @@ export default function Navbar() {
                     onClick={toggleProfileDropdown}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-white/5"
                   >
-                    <div className="w-9 h-9 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full border-2 border-cyan-500/40 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <div className="w-9 h-9 bg-linear-to-br from-cyan-400/20 to-blue-500/20 rounded-full border-2 border-cyan-500/40 flex items-center justify-center shadow-lg shadow-cyan-500/20">
                       <UserCircle className="w-5 h-5" />
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isProfileDropdownOpen ? 'rotate-180' : ''}`} />
@@ -195,7 +195,7 @@ export default function Navbar() {
                         >
                           <LogOut className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform" />
                           <span className="font-medium">Logout</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                          <div className="absolute inset-0 bg-linear-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] group-hover:translate-x-full transition-transform duration-500"></div>
                         </button>
                       </div>
                     </div>
@@ -236,7 +236,7 @@ export default function Navbar() {
                 </Link>
                 <Link 
                   href="/signup" 
-                  className="block w-full px-4 py-3 text-center bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+                  className="block w-full px-4 py-3 text-center bg-linear-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300 flex items-center justify-center gap-2 group"
                   onClick={closeAllMenus}
                 >
                   <UserPlus className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -251,7 +251,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <Home className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <Home className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Dashboard</span>
                 </Link>
                 
@@ -260,7 +260,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <Upload className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <Upload className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Upload</span>
                 </Link>
                 
@@ -269,7 +269,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <Zap className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <Zap className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">AI Analysis</span>
                 </Link>
                 
@@ -278,7 +278,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <BarChart3 className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <BarChart3 className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Reports</span>
                 </Link>
 
@@ -289,7 +289,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <User className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <User className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Profile</span>
                 </Link>
                 
@@ -298,7 +298,7 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <Settings className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <Settings className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Settings</span>
                 </Link>
                 
@@ -311,7 +311,7 @@ export default function Navbar() {
                 >
                   <LogOut className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform" />
                   <span className="font-medium">Logout</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-red-500/0 via-red-500/10 to-red-500/0 translate-x-[-100%] group-hover:translate-x-full transition-transform duration-500"></div>
                 </button>
               </div>
             )}

@@ -87,13 +87,13 @@ export default function InsightsPage() {
   const keyPoints = extractKeyPoints(insights);
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-950">
+    <div className="min-h-screen p-6 bg-linear-to-br from-gray-900 via-gray-900 to-gray-950">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-10">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl">
+              <div className="p-3 bg-linear-to-br from-purple-500/10 to-pink-500/10 rounded-xl">
                 <Brain className="w-8 h-8 text-purple-400" />
               </div>
               <div>
@@ -130,7 +130,7 @@ export default function InsightsPage() {
                     disabled={isLoading}
                     className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 group ${
                       language === lang.code
-                        ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
+                        ? "bg-linear-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
                         : "bg-gray-900/50 border-gray-700/50 text-gray-400 hover:border-cyan-500/30 hover:text-white"
                     } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
@@ -152,7 +152,7 @@ export default function InsightsPage() {
           <div className="lg:col-span-2">
             <div className="glass rounded-2xl border border-gray-800/50 overflow-hidden">
               {/* Header */}
-              <div className="p-6 border-b border-gray-800/50 bg-gradient-to-r from-gray-900/50 to-gray-900/30">
+              <div className="p-6 border-b border-gray-800/50 bg-linear-to-r from-gray-900/50 to-gray-900/30">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Lightbulb className="w-6 h-6 text-yellow-400" />
@@ -184,14 +184,14 @@ export default function InsightsPage() {
               </div>
 
               {/* Content */}
-              <div className="p-6 min-h-[500px]">
+              <div className="p-6 min-h-125">
                 {isLoading ? (
                   <div className="flex flex-col items-center justify-center h-96">
                     <div className="relative mb-8">
                       <div className="w-20 h-20 border-4 border-gray-800 rounded-full"></div>
                       <div className="absolute top-0 left-0 w-20 h-20 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                        <div className="w-10 h-10 bg-linear-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                           <Brain className="w-5 h-5 text-white animate-pulse" />
                         </div>
                       </div>
@@ -205,7 +205,7 @@ export default function InsightsPage() {
                     </p>
                   </div>
                 ) : error ? (
-                  <div className="p-4 bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
+                  <div className="p-4 bg-linear-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
                         <AlertCircle className="w-5 h-5 text-white" />
@@ -241,7 +241,7 @@ export default function InsightsPage() {
                     {/* Key Points */}
                     {keyPoints.length > 0 && (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-xl p-4 border border-cyan-500/20">
+                        <div className="bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-xl p-4 border border-cyan-500/20">
                           <h4 className="font-medium text-white mb-3 flex items-center gap-2">
                             <CheckCircle className="w-4 h-4 text-cyan-400" />
                             Strengths Identified
@@ -255,7 +255,7 @@ export default function InsightsPage() {
                             ))}
                           </ul>
                         </div>
-                        <div className="bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-xl p-4 border border-purple-500/20">
+                        <div className="bg-linear-to-br from-purple-500/5 to-pink-500/5 rounded-xl p-4 border border-purple-500/20">
                           <h4 className="font-medium text-white mb-3 flex items-center gap-2">
                             <Target className="w-4 h-4 text-purple-400" />
                             Recommendations
@@ -274,7 +274,7 @@ export default function InsightsPage() {
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center h-96 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full flex items-center justify-center mb-6 group">
+                    <div className="w-20 h-20 bg-linear-to-br from-purple-500/10 to-pink-500/10 rounded-full flex items-center justify-center mb-6 group">
                       <Brain className="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">No Insights Available</h3>
@@ -283,7 +283,7 @@ export default function InsightsPage() {
                     </p>
                     <button
                       onClick={() => fetchInsights(language)}
-                      className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group"
+                      className="px-6 py-3 bg-linear-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group"
                     >
                       <RefreshCw className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
                       Generate Insights
@@ -392,15 +392,15 @@ export default function InsightsPage() {
                   Recommended Actions
                 </h3>
                 <div className="space-y-3">
-                  <button className="w-full text-left p-3 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 border border-cyan-500/20 rounded-lg hover:border-cyan-500/40 transition-colors flex items-center justify-between group">
+                  <button className="w-full text-left p-3 bg-linear-to-r from-cyan-500/5 to-blue-500/5 border border-cyan-500/20 rounded-lg hover:border-cyan-500/40 transition-colors flex items-center justify-between group">
                     <span className="text-white text-sm">Review Detailed Reports</span>
                     <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                   </button>
-                  <button className="w-full text-left p-3 bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-lg hover:border-purple-500/40 transition-colors flex items-center justify-between group">
+                  <button className="w-full text-left p-3 bg-linear-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-lg hover:border-purple-500/40 transition-colors flex items-center justify-between group">
                     <span className="text-white text-sm">Schedule Consultation</span>
                     <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
                   </button>
-                  <button className="w-full text-left p-3 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 border border-emerald-500/20 rounded-lg hover:border-emerald-500/40 transition-colors flex items-center justify-between group">
+                  <button className="w-full text-left p-3 bg-linear-to-r from-emerald-500/5 to-teal-500/5 border border-emerald-500/20 rounded-lg hover:border-emerald-500/40 transition-colors flex items-center justify-between group">
                     <span className="text-white text-sm">Update Financial Data</span>
                     <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
                   </button>

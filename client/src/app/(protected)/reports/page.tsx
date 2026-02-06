@@ -40,7 +40,7 @@ export default function ReportsPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
+          <div className="p-3 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
             <BarChart3 className="w-8 h-8 text-cyan-400" />
           </div>
           <div>
@@ -62,8 +62,8 @@ export default function ReportsPage() {
             <Filter className="w-4 h-4 group-hover:rotate-90 transition-transform" />
             Filter
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-[100%] transition-transform duration-700"></div>
+          <button className="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group relative overflow-hidden">
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             <span className="relative">Export PDF</span>
           </button>
@@ -136,7 +136,7 @@ export default function ReportsPage() {
       {/* Overall Financial Health */}
       <section className="glass rounded-2xl border border-gray-800/50 p-6">
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-lg">
+          <div className="p-2 bg-linear-to-br from-green-500/10 to-emerald-500/10 rounded-lg">
             <TrendingUp className="w-5 h-5 text-green-400" />
           </div>
           <div>
@@ -175,7 +175,7 @@ export default function ReportsPage() {
       {/* Key Risks */}
       <section className="glass rounded-2xl border border-gray-800/50 p-6">
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-lg">
+          <div className="p-2 bg-linear-to-br from-yellow-500/10 to-orange-500/10 rounded-lg">
             <AlertTriangle className="w-5 h-5 text-yellow-400" />
           </div>
           <div>
@@ -215,7 +215,7 @@ export default function ReportsPage() {
       {/* Recommendations */}
       <section className="glass rounded-2xl border border-gray-800/50 p-6">
         <div className="flex items-start gap-3 mb-4">
-          <div className="p-2 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-lg">
+          <div className="p-2 bg-linear-to-br from-blue-500/10 to-indigo-500/10 rounded-lg">
             <FileText className="w-5 h-5 text-blue-400" />
           </div>
           <div>
@@ -229,7 +229,7 @@ export default function ReportsPage() {
 
         <div className="space-y-4">
           <div className="flex items-start gap-3 group">
-            <div className="w-6 h-6 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded flex items-center justify-center mt-0.5">
+            <div className="w-6 h-6 bg-linear-to-br from-cyan-500/20 to-blue-500/20 rounded flex items-center justify-center mt-0.5">
               <span className="text-sm text-white">1</span>
             </div>
             <div className="flex-1">
@@ -238,11 +238,11 @@ export default function ReportsPage() {
               </p>
               <p className="text-gray-400 text-sm mt-1">Estimated impact: High • Timeline: 30 days</p>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-transform" />
           </div>
 
           <div className="flex items-start gap-3 group">
-            <div className="w-6 h-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded flex items-center justify-center mt-0.5">
+            <div className="w-6 h-6 bg-linear-to-br from-purple-500/20 to-pink-500/20 rounded flex items-center justify-center mt-0.5">
               <span className="text-sm text-white">2</span>
             </div>
             <div className="flex-1">
@@ -251,11 +251,11 @@ export default function ReportsPage() {
               </p>
               <p className="text-gray-400 text-sm mt-1">Estimated impact: Medium • Timeline: 90 days</p>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-transform" />
           </div>
 
           <div className="flex items-start gap-3 group">
-            <div className="w-6 h-6 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded flex items-center justify-center mt-0.5">
+            <div className="w-6 h-6 bg-linear-to-br from-green-500/20 to-emerald-500/20 rounded flex items-center justify-center mt-0.5">
               <span className="text-sm text-white">3</span>
             </div>
             <div className="flex-1">
@@ -264,11 +264,11 @@ export default function ReportsPage() {
               </p>
               <p className="text-gray-400 text-sm mt-1">Estimated impact: High • Timeline: 60 days</p>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-transform" />
           </div>
 
           <div className="flex items-start gap-3 group">
-            <div className="w-6 h-6 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded flex items-center justify-center mt-0.5">
+            <div className="w-6 h-6 bg-linear-to-br from-yellow-500/20 to-orange-500/20 rounded flex items-center justify-center mt-0.5">
               <span className="text-sm text-white">4</span>
             </div>
             <div className="flex-1">
@@ -277,11 +277,11 @@ export default function ReportsPage() {
               </p>
               <p className="text-gray-400 text-sm mt-1">Estimated impact: Medium • Timeline: 45 days</p>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-transform" />
           </div>
 
           <div className="flex items-start gap-3 group">
-            <div className="w-6 h-6 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded flex items-center justify-center mt-0.5">
+            <div className="w-6 h-6 bg-linear-to-br from-indigo-500/20 to-purple-500/20 rounded flex items-center justify-center mt-0.5">
               <span className="text-sm text-white">5</span>
             </div>
             <div className="flex-1">
@@ -290,7 +290,7 @@ export default function ReportsPage() {
               </p>
               <p className="text-gray-400 text-sm mt-1">Estimated impact: Low • Timeline: Ongoing</p>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <ArrowRight className="w-4 h-4 text-gray-500 mt-0.5 opacity-0 group-hover:opacity-100 transition-transform" />
           </div>
         </div>
       </section>
@@ -299,7 +299,7 @@ export default function ReportsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <section className="glass rounded-2xl border border-gray-800/50 p-6">
           <div className="flex items-start gap-3 mb-4">
-            <div className="p-2 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg">
+            <div className="p-2 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-lg">
               <LineChart className="w-5 h-5 text-cyan-400" />
             </div>
             <div>
@@ -325,7 +325,7 @@ export default function ReportsPage() {
 
         <section className="glass rounded-2xl border border-gray-800/50 p-6">
           <div className="flex items-start gap-3 mb-4">
-            <div className="p-2 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg">
+            <div className="p-2 bg-linear-to-br from-purple-500/10 to-pink-500/10 rounded-lg">
               <Target className="w-5 h-5 text-purple-400" />
             </div>
             <div>
@@ -351,7 +351,7 @@ export default function ReportsPage() {
       </div>
 
       {/* Footer Note */}
-      <div className="p-4 bg-gradient-to-r from-gray-900/50 to-gray-900/30 border border-gray-800/50 rounded-xl">
+      <div className="p-4 bg-linear-to-r from-gray-900/50 to-gray-900/30 border border-gray-800/50 rounded-xl">
         <div className="flex items-start gap-3">
           <Shield className="w-5 h-5 text-gray-400 mt-0.5" />
           <div>

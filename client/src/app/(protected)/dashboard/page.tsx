@@ -148,7 +148,7 @@ export default function Dashboard() {
   // Loading state
   if (isLoading) {
     return (
-      <div className="min-h-screen p-6 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-950">
+      <div className="min-h-screen p-6 bg-linear-to-br from-gray-900 via-gray-900 to-gray-950">
         <div className="max-w-7xl mx-auto">
           {/* Skeleton header */}
           <div className="mb-8">
@@ -180,11 +180,11 @@ export default function Dashboard() {
   // No data or error state
   if (!metrics || error) {
     return (
-      <div className="min-h-screen p-6 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-950">
+      <div className="min-h-screen p-6 bg-linear-to-br from-gray-900 via-gray-900 to-gray-950">
         <div className="max-w-4xl mx-auto">
           <div className="backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 shadow-2xl p-12 text-center">
             {/* Icon */}
-            <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-full flex items-center justify-center">
+            <div className="w-24 h-24 mx-auto mb-6 bg-linear-to-br from-yellow-500/10 to-orange-500/10 rounded-full flex items-center justify-center">
               <FileText className="w-12 h-12 text-yellow-400" />
             </div>
 
@@ -203,9 +203,9 @@ export default function Dashboard() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/upload"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 group relative overflow-hidden flex items-center gap-2"
+                className="px-8 py-4 bg-linear-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 group relative overflow-hidden flex items-center gap-2"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <Upload className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                 <span className="relative">Upload Documents</span>
               </Link>
@@ -232,7 +232,7 @@ export default function Dashboard() {
                   </div>
                   <h4 className="text-white font-medium flex items-center gap-2">
                     1. Upload Data
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-transform" />
                   </h4>
                   <p className="text-gray-400 text-sm">Upload your financial statements, invoices, or Excel files</p>
                 </div>
@@ -242,7 +242,7 @@ export default function Dashboard() {
                   </div>
                   <h4 className="text-white font-medium flex items-center gap-2">
                     2. AI Analysis
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-transform" />
                   </h4>
                   <p className="text-gray-400 text-sm">Our AI processes and analyzes your financial data</p>
                 </div>
@@ -252,7 +252,7 @@ export default function Dashboard() {
                   </div>
                   <h4 className="text-white font-medium flex items-center gap-2">
                     3. Get Insights
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-transform" />
                   </h4>
                   <p className="text-gray-400 text-sm">View comprehensive metrics and actionable insights</p>
                 </div>
@@ -275,13 +275,13 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-br from-gray-900 via-gray-900 to-gray-950">
+    <div className="min-h-screen p-6 bg-linear-to-br from-gray-900 via-gray-900 to-gray-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
+              <div className="p-3 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-xl">
                 <BarChart3 className="w-6 h-6 text-cyan-400" />
               </div>
               <div>
@@ -433,7 +433,7 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link
               href="/analysis"
-              className="p-4 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 border border-cyan-500/20 rounded-xl hover:border-cyan-500/40 transition-colors group"
+              className="p-4 bg-linear-to-br from-cyan-500/5 to-blue-500/5 border border-cyan-500/20 rounded-xl hover:border-cyan-500/40 transition-colors group"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-cyan-500/10 rounded-lg">
@@ -449,7 +449,7 @@ export default function Dashboard() {
 
             <Link
               href="/reports"
-              className="p-4 bg-gradient-to-br from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-xl hover:border-purple-500/40 transition-colors group"
+              className="p-4 bg-linear-to-br from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-xl hover:border-purple-500/40 transition-colors group"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-purple-500/10 rounded-lg">
@@ -465,7 +465,7 @@ export default function Dashboard() {
 
             <Link
               href="/upload"
-              className="p-4 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 border border-emerald-500/20 rounded-xl hover:border-emerald-500/40 transition-colors group"
+              className="p-4 bg-linear-to-br from-emerald-500/5 to-teal-500/5 border border-emerald-500/20 rounded-xl hover:border-emerald-500/40 transition-colors group"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-emerald-500/10 rounded-lg">
@@ -488,7 +488,7 @@ export default function Dashboard() {
             Data updated automatically • For detailed analysis, visit the{" "}
             <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors flex items-center gap-1 group">
               Reports section
-              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-transform" />
             </Link>
           </p>
         </div>

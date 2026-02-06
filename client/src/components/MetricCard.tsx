@@ -20,7 +20,7 @@ export default function MetricCard({ title, value, trend, description, icon }: a
   return (
     <div className="glass rounded-2xl p-6 border border-gray-800/50 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 hover:border-cyan-500/30 transition-all duration-300 group relative overflow-hidden">
       {/* Background gradient effect on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500"></div>
       
       <div className="relative z-10">
         {/* Header */}
@@ -35,7 +35,7 @@ export default function MetricCard({ title, value, trend, description, icon }: a
           {/* Icon or trend indicator */}
           <div className="flex items-center space-x-2">
             {icon && (
-              <div className="p-2 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg">
+              <div className="p-2 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-lg">
                 <span className="text-cyan-400">{icon}</span>
               </div>
             )}
@@ -63,7 +63,7 @@ export default function MetricCard({ title, value, trend, description, icon }: a
             <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
               <div 
                 className={`h-full rounded-full transition-all duration-700 ${
-                  trend > 0 ? "bg-gradient-to-r from-green-500 to-cyan-500" : "bg-gradient-to-r from-red-500 to-orange-500"
+                  trend > 0 ? "bg-linear-to-r from-green-500 to-cyan-500" : "bg-linear-to-r from-red-500 to-orange-500"
                 }`}
                 style={{ width: `${Math.min(Math.abs(trend) * 10, 100)}%` }}
               ></div>
@@ -72,7 +72,7 @@ export default function MetricCard({ title, value, trend, description, icon }: a
         )}
 
         {/* Decorative accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-blue-500/0 group-hover:via-cyan-500 group-hover:to-blue-500 transition-all duration-300"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-cyan-500/0 via-cyan-500/50 to-blue-500/0 group-hover:via-cyan-500 group-hover:to-blue-500 transition-all duration-300"></div>
       </div>
     </div>
   );

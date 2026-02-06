@@ -159,7 +159,7 @@ export default function LoginPage() {
               disabled={isLoading}
               className="w-full px-6 py-3.5 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg group relative overflow-hidden flex items-center justify-center gap-2"
             >
-              <div className="absolute inset-0 bg-linear-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-[100%] transition-transform duration-700 disabled:-translate-x-full"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-cyan-500/0 via-white/20 to-cyan-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 disabled:-translate-x-full"></div>
               {isLoading ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -169,7 +169,7 @@ export default function LoginPage() {
                 <>
                   <LogIn className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <span>Sign In</span>
-                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transition-transform" />
+                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </>
               )}
             </button>

@@ -94,13 +94,13 @@ export default function AnalysisPage() {
                       onClick={() => setLang(language.code)}
                       className={`flex items-center justify-center p-3 rounded-lg border transition-all duration-300 group ${
                         lang === language.code
-                          ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
+                          ? "bg-linear-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
                           : "bg-gray-900/50 border-gray-700/50 text-gray-400 hover:border-cyan-500/30 hover:text-white"
                       }`}
                     >
                       <span className="mr-2 text-lg">{language.flag}</span>
                       <span className="text-sm">{language.name}</span>
-                      <ChevronRight className={`w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity ${
+                      <ChevronRight className={`w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-transform ${
                         lang === language.code ? 'opacity-100' : ''
                       }`} />
                     </button>
@@ -116,9 +116,9 @@ export default function AnalysisPage() {
               <button
                 onClick={run}
                 disabled={isGenerating}
-                className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg group relative overflow-hidden"
+                className="w-full px-6 py-4 bg-linear-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg group relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-white/20 to-purple-500/0 -translate-x-full group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-purple-500/0 via-white/20 to-purple-500/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <span className="relative flex items-center justify-center gap-3">
                   {isGenerating ? (
                     <>
@@ -128,7 +128,7 @@ export default function AnalysisPage() {
                   ) : (
                     <>
                       Generate Financial Insights
-                      <Bot className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transition-transform" />
+                      <Bot className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                     </>
                   )}
                 </span>
@@ -162,10 +162,10 @@ export default function AnalysisPage() {
           <div className="lg:col-span-2">
             <div className="glass rounded-2xl border border-gray-800/50 overflow-hidden">
               {/* Results Header */}
-              <div className="p-6 border-b border-gray-800/50 bg-gradient-to-r from-gray-900/50 to-gray-900/30">
+              <div className="p-6 border-b border-gray-800/50 bg-linear-to-r from-gray-900/50 to-gray-900/30">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-lg">
+                    <div className="p-2 bg-linear-to-br from-purple-500/10 to-indigo-500/10 rounded-lg">
                       <LineChart className="w-6 h-6 text-purple-400" />
                     </div>
                     <div>
@@ -188,9 +188,9 @@ export default function AnalysisPage() {
               </div>
 
               {/* Results Content */}
-              <div className="p-6 min-h-[500px]">
+              <div className="p-6 min-h-125">
                 {error ? (
-                  <div className="p-4 bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
+                  <div className="p-4 bg-linear-to-r from-red-500/10 to-pink-500/10 border border-red-500/30 rounded-xl">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                         <AlertTriangle className="w-5 h-5 text-white" />
@@ -218,7 +218,7 @@ export default function AnalysisPage() {
 
                     {/* Additional Recommendations */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-xl p-4 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group">
+                      <div className="bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-xl p-4 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors group">
                         <h4 className="font-medium text-white mb-2 flex items-center gap-2">
                           <TrendingUp className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
                           Growth Opportunities
@@ -238,7 +238,7 @@ export default function AnalysisPage() {
                           </li>
                         </ul>
                       </div>
-                      <div className="bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-xl p-4 border border-purple-500/20 hover:border-purple-500/40 transition-colors group">
+                      <div className="bg-linear-to-br from-purple-500/5 to-pink-500/5 rounded-xl p-4 border border-purple-500/20 hover:border-purple-500/40 transition-colors group">
                         <h4 className="font-medium text-white mb-2 flex items-center gap-2">
                           <AlertCircle className="w-4 h-4 text-purple-400 group-hover:rotate-12 transition-transform" />
                           Risk Management
@@ -261,7 +261,7 @@ export default function AnalysisPage() {
                     </div>
 
                     {/* Cost Optimization Card */}
-                    <div className="bg-gradient-to-br from-emerald-500/5 to-teal-500/5 rounded-xl p-4 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors group">
+                    <div className="bg-linear-to-br from-emerald-500/5 to-teal-500/5 rounded-xl p-4 border border-emerald-500/20 hover:border-emerald-500/40 transition-colors group">
                       <h4 className="font-medium text-white mb-2 flex items-center gap-2">
                         <Coins className="w-4 h-4 text-emerald-400 group-hover:rotate-12 transition-transform" />
                         Cost Optimization
@@ -288,7 +288,7 @@ export default function AnalysisPage() {
                       <div className="w-24 h-24 border-4 border-gray-800 rounded-full"></div>
                       <div className="absolute top-0 left-0 w-24 h-24 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
+                        <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
                           <Brain className="w-6 h-6 text-white animate-pulse" />
                         </div>
                       </div>
@@ -303,7 +303,7 @@ export default function AnalysisPage() {
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center h-96 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-full flex items-center justify-center mb-6 group">
+                    <div className="w-20 h-20 bg-linear-to-br from-purple-500/10 to-indigo-500/10 rounded-full flex items-center justify-center mb-6 group">
                       <Lightbulb className="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Generate Financial Insights</h3>

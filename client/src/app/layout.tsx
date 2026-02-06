@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 min-h-screen">
+      <body className="bg-linear-to-br from-gray-900 via-gray-800 to-gray-950 min-h-screen">
         <AuthProvider>
           {children}
         </AuthProvider>
