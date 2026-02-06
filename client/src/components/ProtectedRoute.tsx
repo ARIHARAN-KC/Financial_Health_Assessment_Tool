@@ -17,7 +17,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
     const verifyAuth = () => {
       const authenticated = checkAuth();
       console.log('ProtectedRoute - Auth status:', authenticated);
-      
+
       if (!authenticated) {
         console.log('Not authenticated, redirecting to login');
         router.push("/login");

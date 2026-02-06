@@ -16,9 +16,11 @@ import {
   UserPlus,
 } from "lucide-react";
 import Image from "next/image";
+import { useNotify } from "@/utils/notify";
 
 export default function LoginPage() {
   const router = useRouter();
+  const notify = useNotify();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -26,7 +28,7 @@ export default function LoginPage() {
 
   const login = async () => {
     if (!email || !password) {
-      alert("Please fill in all fields");
+      notify.error("Please fill in all fields", "Validation Error");
       return;
     }
 
@@ -43,9 +45,10 @@ export default function LoginPage() {
       });
 
       saveToken(res.data.access_token);
+      notify.success("Login successful!", "Welcome Back");
       router.push("/dashboard");
     } catch (err) {
-      alert("Login failed. Please check your credentials.");
+      notify.error("Login failed. Please check your credentials.", "Authentication Failed");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -71,7 +74,6 @@ export default function LoginPage() {
           <div className="text-center mb-8">
             <Link href="/" className="inline-block">
               <div className="flex items-center justify-center gap-3 mb-2">
-                {/* Option 1: Using Next.js Image component (recommended) */}
                 <div className="relative w-16 h-16">
                   <Image
                     src="/logo.svg"
@@ -81,12 +83,6 @@ export default function LoginPage() {
                     priority
                   />
                 </div>
-                {/* Option 2: Regular img tag with fixed size */}
-                {/* <img 
-                  src="/logo.svg" 
-                  alt="FinMind Logo" 
-                  className="w-10 h-10" 
-                /> */}
                 <h2 className="text-3xl font-bold gradient-text">FinMind</h2>
               </div>
             </Link>

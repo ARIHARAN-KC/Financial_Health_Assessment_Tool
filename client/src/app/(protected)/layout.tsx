@@ -8,8 +8,12 @@ export default function ProtectedLayout({
 }) {
   return (
     <ProtectedRoute>
-      <Navbar />
-      {children}
+      <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-gray-950">
+        <Navbar />
+        <main className="pt-4">
+          {children}
+        </main>
+      </div>
     </ProtectedRoute>
   );
 }

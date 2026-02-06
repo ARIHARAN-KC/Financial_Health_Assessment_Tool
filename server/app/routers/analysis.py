@@ -10,6 +10,7 @@ from app.services.benchmarking import BenchmarkingService
 from app.models.financial_data import FinancialData
 from app.models.user import User
 from app.models.report import Report
+from app.services.working_capital import WorkingCapitalAdvisor
 
 router = APIRouter()
 
@@ -34,6 +35,8 @@ def analyze(
     risk = RiskEngine.assess_risk(metrics)
     credit_score = RiskEngine.credit_score(metrics)
 
+    suggestions = WorkingCapitalAdvisor.suggest(metrics)
+
     user = db.query(User).get(int(user_id))
     benchmark = BenchmarkingService.compare(metrics, user.industry or "")
 
@@ -46,6 +49,7 @@ def analyze(
             "risk": risk,
             "credit_score": credit_score,
             "benchmark": benchmark,
+            "working_capital_suggestions": suggestions,
         },
     )
 
@@ -59,4 +63,5 @@ def analyze(
         "risk": risk,
         "credit_score": credit_score,
         "benchmark": benchmark,
+        "working_capital_suggestions": suggestions,
     }

@@ -18,7 +18,7 @@ export default function PublicRoute({ children, redirectTo = "/dashboard" }: Pub
     const verifyAuth = () => {
       const authenticated = checkAuth();
       console.log('PublicRoute - Auth status:', authenticated);
-      
+
       if (authenticated) {
         console.log('Already authenticated, redirecting to', redirectTo);
         router.push(redirectTo);

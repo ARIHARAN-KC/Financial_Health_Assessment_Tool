@@ -15,6 +15,7 @@ import {
   LogOut,
   UserCircle,
   ChevronDown,
+  Calendar,
 } from "lucide-react";
 import { FaSearch } from 'react-icons/fa';
 
@@ -147,6 +148,16 @@ export default function Navbar() {
                   <div className="flex items-center space-x-2">
                     <BarChart3 className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">Reports</span>
+                  </div>
+                </Link>
+                <Link 
+                  href="/forecast" 
+                  className="text-gray-300 hover:text-white transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-white/5"
+                  onClick={closeAllMenus}
+                >
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
+                    <span className="font-medium">Forecast</span>
                   </div>
                 </Link>
 

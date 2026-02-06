@@ -21,9 +21,11 @@ import {
   LogIn,
   Check
 } from "lucide-react";
+import { useNotify } from "@/utils/notify";
 
 export default function SignupPage() {
   const router = useRouter();
+  const notify = useNotify(); 
   const [form, setForm] = useState<any>({
     email: "",
     full_name: "",
@@ -39,28 +41,28 @@ export default function SignupPage() {
   const signup = async () => {
     // Validation
     if (!form.email || !form.full_name || !form.business_name || !form.industry || !form.password) {
-      alert("Please fill in all required fields");
+      notify.error("Please fill in all required fields", "Validation Error");
       return;
     }
 
     if (form.password !== confirmPassword) {
-      alert("Passwords do not match");
+      notify.error("Passwords do not match", "Validation Error");
       return;
     }
 
     if (form.password.length < 6) {
-      alert("Password must be at least 6 characters long");
+      notify.error("Password must be at least 6 characters long", "Validation Error");
       return;
     }
 
     setIsLoading(true);
     try {
       await api.post("/auth/signup", form);
-      alert("Signup successful! Please login to continue.");
+      notify.success("Signup successful! Please login to continue.", "Account Created"); 
       router.push("/login");
     } catch (err: any) {
       const errorMsg = err.response?.data?.detail || "Signup failed. Please try again.";
-      alert(errorMsg);
+      notify.error(errorMsg, "Signup Failed"); 
       console.error(err);
     } finally {
       setIsLoading(false);

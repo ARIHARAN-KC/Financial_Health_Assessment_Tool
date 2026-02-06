@@ -5,7 +5,7 @@ from app.core.config import settings
 from app.core.database import engine, Base
 
 # Routers
-from app.routers import health,auth, upload, analysis, ai, reports, banking_mock, gst_mock, compliance
+from app.routers import health,auth, upload, analysis, ai, reports, banking_mock, gst_mock, compliance, forecast
 
 
 def create_app() -> FastAPI:
@@ -35,6 +35,8 @@ def create_app() -> FastAPI:
     app.include_router(reports.router, prefix="/api/reports", tags=["Reports"])
     app.include_router(banking_mock.router, prefix="/api/banking", tags=["Banking"])
     app.include_router(gst_mock.router, prefix="/api/gst", tags=["GST"])
+    app.include_router(forecast.router, prefix="/api/forecast", tags=["Forecast"])
+
 
     return app
 
