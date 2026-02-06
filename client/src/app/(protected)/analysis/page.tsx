@@ -8,17 +8,13 @@ import {
   FileText,
   Shield,
   AlertCircle,
-  Download,
-  Share2,
   CheckCircle2,
   TrendingUp,
   AlertTriangle,
   Lightbulb,
   Coins,
-  Zap,
   Loader2,
   Brain,
-  Calculator,
   Target,
   LineChart,
   BarChart3,
@@ -37,7 +33,7 @@ export default function AnalysisPage() {
     setIsGenerating(true);
     setError(null);
     setText("");
-    
+
     try {
       const res = await api.post(`/ai/financial-health?language=${lang}`);
       setText(res.data.insights);
@@ -66,7 +62,6 @@ export default function AnalysisPage() {
             </h1>
           </div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto flex items-center justify-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-400" />
             Get AI-powered insights into your business financial health
           </p>
         </div>
@@ -78,7 +73,7 @@ export default function AnalysisPage() {
               <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                 Analysis Settings
               </h2>
-              
+
               {/* Language Selection */}
               <div className="mb-8">
                 <label className="block text-sm font-medium text-gray-300 mb-3">
@@ -92,17 +87,15 @@ export default function AnalysisPage() {
                     <button
                       key={language.code}
                       onClick={() => setLang(language.code)}
-                      className={`flex items-center justify-center p-3 rounded-lg border transition-all duration-300 group ${
-                        lang === language.code
+                      className={`flex items-center justify-center p-3 rounded-lg border transition-all duration-300 group ${lang === language.code
                           ? "bg-linear-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
                           : "bg-gray-900/50 border-gray-700/50 text-gray-400 hover:border-cyan-500/30 hover:text-white"
-                      }`}
+                        }`}
                     >
                       <span className="mr-2 text-lg">{language.flag}</span>
                       <span className="text-sm">{language.name}</span>
-                      <ChevronRight className={`w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-transform ${
-                        lang === language.code ? 'opacity-100' : ''
-                      }`} />
+                      <ChevronRight className={`w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-transform ${lang === language.code ? 'opacity-100' : ''
+                        }`} />
                     </button>
                   ))}
                 </div>
@@ -175,14 +168,6 @@ export default function AnalysisPage() {
                         Language: {languages.find(l => l.code === lang)?.name}
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <button className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200 group">
-                      <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                    </button>
-                    <button className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200 group">
-                      <Share2 className="w-5 h-5 group-hover:rotate-90 transition-transform" />
-                    </button>
                   </div>
                 </div>
               </div>

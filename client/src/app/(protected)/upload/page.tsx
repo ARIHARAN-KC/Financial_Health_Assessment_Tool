@@ -14,10 +14,7 @@ import {
   File,
   BarChart3,
   Shield,
-  RefreshCw,
   Loader2,
-  Sparkles,
-  Zap,
   FileSpreadsheet,
   Image as ImageIcon,
   FolderOpen,
@@ -26,8 +23,6 @@ import {
   AlertTriangle,
   Lock,
   Brain,
-  ArrowUpRight,
-  Download
 } from "lucide-react";
 
 export default function UploadPage() {
@@ -40,7 +35,7 @@ export default function UploadPage() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0] || null;
-    
+
     if (selectedFile) {
       // Validate file type
       const allowedTypes = [
@@ -52,7 +47,7 @@ export default function UploadPage() {
         'image/jpeg',
         'image/png'
       ];
-      
+
       if (!allowedTypes.includes(selectedFile.type)) {
         alert("Please upload a valid file type (PDF, Excel, CSV, JSON, or image)");
         return;
@@ -78,7 +73,7 @@ export default function UploadPage() {
 
     setIsUploading(true);
     setUploadProgress(0);
-    
+
     try {
       const form = new FormData();
       form.append("file", file);
@@ -103,7 +98,7 @@ export default function UploadPage() {
       clearInterval(progressInterval);
       setUploadProgress(100);
       setUploadStatus("success");
-      
+
       // Auto-redirect after 2 seconds
       setTimeout(() => {
         router.push("/analysis");
@@ -126,19 +121,19 @@ export default function UploadPage() {
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile) {
       // Create a proper ChangeEvent for the file input
       const dataTransfer = new DataTransfer();
       dataTransfer.items.add(droppedFile);
-      
+
       const syntheticEvent = {
         target: {
           files: dataTransfer.files
         }
       } as unknown as React.ChangeEvent<HTMLInputElement>;
-      
+
       handleFileChange(syntheticEvent);
     }
   };
@@ -195,7 +190,7 @@ export default function UploadPage() {
 
         {/* Upload Area */}
         <div className="glass rounded-2xl p-8 border-2 border-dashed border-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 mb-8 group">
-          <div 
+          <div
             className={`relative ${!file ? 'cursor-pointer' : ''}`}
             onDragOver={handleDragOver}
             onDrop={handleDrop}
@@ -208,7 +203,7 @@ export default function UploadPage() {
               className="hidden"
               accept=".pdf,.xlsx,.xls,.csv,.json,.jpg,.jpeg,.png"
             />
-            
+
             {!file ? (
               <div className="text-center py-12">
                 <div className="w-20 h-20 mx-auto mb-6 bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -262,7 +257,7 @@ export default function UploadPage() {
                       <span className="text-cyan-400 font-medium">{uploadProgress}%</span>
                     </div>
                     <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full bg-linear-to-r from-cyan-500 to-blue-500 transition-all duration-300"
                         style={{ width: `${uploadProgress}%` }}
                       ></div>
@@ -325,7 +320,6 @@ export default function UploadPage() {
                 <>
                   <Brain className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   Upload & Analyze
-                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </>
               )}
             </span>
@@ -383,12 +377,12 @@ export default function UploadPage() {
                 </div>
                 <div>
                   <p className="text-white font-medium group-hover:text-cyan-300 transition-colors">Secure & Private</p>
-                  <p className="text-gray-400 text-sm">Bank-level encryption, automatic data deletion</p>
+                  <p className="text-gray-400 text-sm">Encryption and access controls</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Additional Features */}
           <div className="mt-8 pt-6 border-t border-gray-800/50">
             <h4 className="text-white font-medium mb-4 flex items-center gap-2">

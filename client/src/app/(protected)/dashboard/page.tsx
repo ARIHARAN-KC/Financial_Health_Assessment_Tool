@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   RefreshCw,
   Upload,
-  AlertCircle,
   TrendingUp,
   TrendingDown,
   DollarSign,
@@ -18,25 +17,18 @@ import {
   Scale,
   Zap,
   Brain,
+  Eye,
   FileText,
-  Shield,
   Lightbulb,
-  Download,
   Clock,
   CheckCircle,
-  XCircle,
   AlertTriangle,
-  Sparkles,
   Rocket,
   ArrowRight,
   ArrowUpRight,
-  ArrowDownRight,
   CreditCard,
-  Wallet,
-  Coins,
   LineChart,
   DollarSign as DollarIcon,
-  Calculator,
   TrendingUp as TrendingUpIcon,
   Shield as ShieldIcon
 } from "lucide-react";
@@ -287,7 +279,6 @@ export default function Dashboard() {
               <div>
                 <h1 className="text-3xl font-bold text-white mb-2 flex items-center gap-3">
                   Financial Dashboard
-                  <Sparkles className="w-5 h-5 text-yellow-400" />
                 </h1>
                 <p className="text-gray-400 flex items-center gap-2">
                   <Clock className="w-4 h-4" />
@@ -453,11 +444,11 @@ export default function Dashboard() {
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-purple-500/10 rounded-lg">
-                  <Download className="w-5 h-5 text-purple-400" />
+                  <Eye className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-white group-hover:text-purple-300 transition-colors">Download Reports</h4>
-                  <p className="text-gray-400 text-sm">Export your data</p>
+                  <h4 className="font-medium text-white group-hover:text-purple-300 transition-colors">View Reports</h4>
+                  <p className="text-gray-400 text-sm">View your data</p>
                 </div>
                 <ArrowRight className="w-4 h-4 ml-auto text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
               </div>

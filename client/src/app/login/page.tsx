@@ -5,18 +5,15 @@ import api from "@/lib/api";
 import { saveToken } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { 
-  Lock, 
-  Mail, 
-  LogIn, 
-  Eye, 
-  EyeOff, 
-  Loader2, 
-  Shield, 
-  ArrowRight,
-  Key,
+import {
+  Lock,
+  Mail,
+  LogIn,
+  Eye,
+  EyeOff,
+  Loader2,
+  Shield,
   UserPlus,
-  Sparkles
 } from "lucide-react";
 import Image from "next/image";
 
@@ -67,7 +64,7 @@ export default function LoginPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tr from-indigo-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-      
+
       <div className="w-full max-w-md relative z-10">
         <div className="glass rounded-2xl p-8 md:p-10 border border-gray-800/50 shadow-2xl shadow-blue-500/10">
           {/* Header */}
@@ -76,9 +73,9 @@ export default function LoginPage() {
               <div className="flex items-center justify-center gap-3 mb-2">
                 {/* Option 1: Using Next.js Image component (recommended) */}
                 <div className="relative w-16 h-16">
-                  <Image 
-                    src="/logo.svg" 
-                    alt="FinMind Logo" 
+                  <Image
+                    src="/logo.svg"
+                    alt="FinMind Logo"
                     fill
                     className="object-contain"
                     priority
@@ -169,7 +166,6 @@ export default function LoginPage() {
                 <>
                   <LogIn className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <span>Sign In</span>
-                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </>
               )}
             </button>
@@ -186,17 +182,17 @@ export default function LoginPage() {
 
             {/* Additional links */}
             <div className="text-center space-y-4">
-              <Link 
+              {/* <Link 
                 href="/forgot-password" 
                 className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 hover:underline transition-colors duration-300 group"
               >
                 <Key className="w-4 h-4 group-hover:rotate-12 transition-transform" />
                 Forgot your password?
-              </Link>
+              </Link> */}
               <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
                 Don't have an account?
-                <Link 
-                  href="/signup" 
+                <Link
+                  href="/signup"
                   className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300 group"
                 >
                   <UserPlus className="w-4 h-4 group-hover:scale-110 transition-transform" />

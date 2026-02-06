@@ -11,7 +11,6 @@ import {
   UserPlus,
   Home,
   Upload,
-  Zap,
   BarChart3,
   LogOut,
   UserCircle,

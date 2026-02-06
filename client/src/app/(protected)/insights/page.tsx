@@ -7,26 +7,21 @@ import {
   Sparkles,
   Lightbulb,
   TrendingUp,
-  AlertTriangle,
   Target,
   Zap,
   DollarSign,
   BarChart3,
-  PieChart,
   RefreshCw,
   Download,
   Share2,
   Clock,
   Shield,
   CheckCircle,
-  XCircle,
   AlertCircle,
   FileText,
   Calculator,
   Coins,
-  Building,
   Scale,
-  LineChart,
   ArrowRight,
   Languages,
   Globe,
@@ -51,12 +46,12 @@ export default function InsightsPage() {
       setError(null);
       const res = await api.get(`/ai/insights?lang=${lang}`);
       setInsights(res.data.insights);
-      
+
       // Set last updated time
       const now = new Date();
-      setLastUpdated(now.toLocaleTimeString([], { 
-        hour: '2-digit', 
-        minute: '2-digit' 
+      setLastUpdated(now.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
       }));
     } catch (err: any) {
       console.error("Failed to fetch insights:", err);
@@ -106,7 +101,7 @@ export default function InsightsPage() {
                 </p>
               </div>
             </div>
-            
+
             {lastUpdated && (
               <div className="hidden md:flex items-center gap-2 text-sm text-gray-500">
                 <Clock className="w-4 h-4" />
@@ -128,11 +123,10 @@ export default function InsightsPage() {
                     key={lang.code}
                     onClick={() => handleLanguageChange(lang.code)}
                     disabled={isLoading}
-                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 group ${
-                      language === lang.code
+                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 group ${language === lang.code
                         ? "bg-linear-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 text-white"
                         : "bg-gray-900/50 border-gray-700/50 text-gray-400 hover:border-cyan-500/30 hover:text-white"
-                    } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <span className="text-lg">{lang.flag}</span>
                     <span>{lang.name}</span>

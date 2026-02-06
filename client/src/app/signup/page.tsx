@@ -14,11 +14,9 @@ import {
   Eye,
   EyeOff,
   Loader2,
-  ArrowRight,
   CheckCircle,
   AlertCircle,
   Shield,
-  Sparkles,
   UserPlus,
   LogIn,
   Check
@@ -111,7 +109,7 @@ export default function SignupPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.1),transparent_50%)]"></div>
       <div className="absolute top-20 right-20 w-64 h-64 bg-linear-to-br from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-linear-to-tr from-indigo-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-      
+
       <div className="w-full max-w-2xl relative z-10">
         <div className="glass rounded-2xl p-8 md:p-10 border border-gray-800/50 shadow-2xl shadow-blue-500/10">
           {/* Header */}
@@ -119,9 +117,9 @@ export default function SignupPage() {
             <Link href="/" className="inline-block">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <div className="relative w-16 h-16">
-                  <Image 
-                    src="/logo.svg" 
-                    alt="FinMind Logo" 
+                  <Image
+                    src="/logo.svg"
+                    alt="FinMind Logo"
                     fill
                     className="object-contain"
                     priority
@@ -134,10 +132,6 @@ export default function SignupPage() {
               <UserPlus className="w-6 h-6 text-cyan-400" />
               Create Your Account
             </h3>
-            <p className="text-gray-400 mt-2 flex items-center justify-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              Join 500+ businesses optimizing their financial health
-            </p>
           </div>
 
           {/* Form Grid */}
@@ -157,7 +151,7 @@ export default function SignupPage() {
                   className="w-full pl-10 p-3 glass border border-gray-700/50 rounded-xl focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all duration-300 text-white placeholder-gray-500"
                   placeholder="your@business.com"
                   value={form.email}
-                  onChange={e => setForm({...form, email: e.target.value})}
+                  onChange={e => setForm({ ...form, email: e.target.value })}
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
                 />
@@ -178,7 +172,7 @@ export default function SignupPage() {
                   className="w-full pl-10 p-3 glass border border-gray-700/50 rounded-xl focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all duration-300 text-white placeholder-gray-500"
                   placeholder="John Doe"
                   value={form.full_name}
-                  onChange={e => setForm({...form, full_name: e.target.value})}
+                  onChange={e => setForm({ ...form, full_name: e.target.value })}
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
                 />
@@ -199,7 +193,7 @@ export default function SignupPage() {
                   className="w-full pl-10 p-3 glass border border-gray-700/50 rounded-xl focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all duration-300 text-white placeholder-gray-500"
                   placeholder="Your Business Inc."
                   value={form.business_name}
-                  onChange={e => setForm({...form, business_name: e.target.value})}
+                  onChange={e => setForm({ ...form, business_name: e.target.value })}
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
                 />
@@ -219,7 +213,7 @@ export default function SignupPage() {
                 <select
                   className="w-full pl-10 p-3 glass border border-gray-700/50 rounded-xl focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all duration-300 text-white placeholder-gray-500 appearance-none"
                   value={form.industry}
-                  onChange={e => setForm({...form, industry: e.target.value})}
+                  onChange={e => setForm({ ...form, industry: e.target.value })}
                   disabled={isLoading}
                 >
                   <option value="" className="bg-gray-900">Select your industry</option>
@@ -250,7 +244,7 @@ export default function SignupPage() {
                   className="w-full pl-10 pr-10 p-3 glass border border-gray-700/50 rounded-xl focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all duration-300 text-white placeholder-gray-500"
                   placeholder="At least 6 characters"
                   value={form.password}
-                  onChange={e => setForm({...form, password: e.target.value})}
+                  onChange={e => setForm({ ...form, password: e.target.value })}
                   onKeyPress={handleKeyPress}
                   disabled={isLoading}
                 />
@@ -346,7 +340,7 @@ export default function SignupPage() {
                 </span>
               </div>
               <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
-                <div 
+                <div
                   className={`h-full transition-all duration-500 ${getPasswordWidth()} ${passwordStrength.bg}`}
                 ></div>
               </div>
@@ -388,7 +382,6 @@ export default function SignupPage() {
                 <>
                   <UserPlus className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <span>Create Account</span>
-                  <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-transform -translate-x-2 group-hover:translate-x-0 transition-transform" />
                 </>
               )}
             </button>
@@ -397,8 +390,8 @@ export default function SignupPage() {
             <div className="text-center pt-4 border-t border-gray-800/50">
               <p className="text-gray-500 flex items-center justify-center gap-2">
                 Already have an account?
-                <Link 
-                  href="/login" 
+                <Link
+                  href="/login"
                   className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 hover:underline transition-colors duration-300 group"
                 >
                   <LogIn className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
