@@ -13,13 +13,11 @@ import {
   Upload,
   Zap,
   BarChart3,
-  User,
-  Settings,
   LogOut,
   UserCircle,
   ChevronDown,
-  Sparkles
 } from "lucide-react";
+import { FaSearch } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -137,7 +135,7 @@ export default function Navbar() {
                   onClick={closeAllMenus}
                 >
                   <div className="flex items-center space-x-2">
-                    <Zap className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-transform" />
+                    <FaSearch className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-transform" />
                     <span className="font-medium">AI Analysis</span>
                   </div>
                 </Link>
@@ -169,7 +167,7 @@ export default function Navbar() {
                   {isProfileDropdownOpen && (
                     <div className="absolute right-0 mt-2 w-56 backdrop-blur-xl bg-gray-900/90 rounded-2xl border border-white/10 shadow-2xl shadow-cyan-500/10 animate-in fade-in-0 zoom-in-95">
                       <div className="py-2">
-                        <Link 
+                        {/* <Link 
                           href="/profile" 
                           className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200 group"
                           onClick={closeAllMenus}
@@ -184,7 +182,7 @@ export default function Navbar() {
                         >
                           <Settings className="w-5 h-5 mr-3 group-hover:rotate-90 transition-transform" />
                           <span className="font-medium">Settings</span>
-                        </Link>
+                        </Link> */}
                         <div className="border-t border-white/10 my-2"></div>
                         <button 
                           onClick={() => {
@@ -269,38 +267,38 @@ export default function Navbar() {
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
-                  <Zap className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
+                  <FaSearch className="w-4 h-4 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">AI Analysis</span>
                 </Link>
                 
-                <Link 
+                {/* <Link 
                   href="/reports" 
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
                   <BarChart3 className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Reports</span>
-                </Link>
+                </Link> */}
 
                 <div className="border-t border-white/10 mx-4 my-2"></div>
 
-                <Link 
+                {/* <Link 
                   href="/profile" 
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
                   <User className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Profile</span>
-                </Link>
+                </Link> */}
                 
-                <Link 
+                {/* <Link 
                   href="/settings" 
                   className="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-200 group"
                   onClick={closeAllMenus}
                 >
                   <Settings className="w-5 h-5 mr-3 opacity-70 group-hover:opacity-100 transition-transform" />
                   <span className="font-medium">Settings</span>
-                </Link>
+                </Link> */}
                 
                 <button 
                   onClick={() => {

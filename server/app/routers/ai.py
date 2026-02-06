@@ -9,6 +9,7 @@ from app.ai.prompts import SYSTEM_FINANCIAL_ANALYST, financial_health_prompt
 from app.ai.multilingual import apply_language
 from app.services.finance_analysis import FinanceAnalyzer
 from app.models.financial_data import FinancialData
+from app.models.report import Report
 
 router = APIRouter()
 
@@ -29,10 +30,7 @@ async def ai_financial_health(
         }
 
     df = pd.DataFrame(
-        [
-            {k: v for k, v in r.__dict__.items() if not k.startswith("_")}
-            for r in records
-        ]
+        [{k: v for k, v in r.__dict__.items() if not k.startswith("_")} for r in records]
     )
 
     metrics = FinanceAnalyzer.calculate_metrics(df)
@@ -46,4 +44,23 @@ async def ai_financial_health(
 
     response = await claude_client.generate(system_prompt, user_prompt)
 
-    return {"insights": response["content"]}
+    ai_text = response["content"]
+    
+    report = Report(
+        user_id=int(user_id),
+        report_type="financial_health",
+        summary="Overall financial health analysis",
+        metrics=metrics,
+        ai_insights={
+        "summary": ai_text, 
+    },
+    )
+
+    db.add(report)
+    db.commit()
+    db.refresh(report)
+
+    return {
+        "report_id": report.id,
+        "insights": response["content"],
+    }
